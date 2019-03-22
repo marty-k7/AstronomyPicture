@@ -1,0 +1,6 @@
+framework module Pods_Astronomy_picture_of_the_day {
+  umbrella header "Pods-Astronomy-picture-of-the-day-umbrella.h"
+
+  export *
+  module * { export * }
+}

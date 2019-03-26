@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C02CEF12249051F0054B5D9 /* popUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02CEF02249051F0054B5D9 /* popUpVC.swift */; };
 		1C2F5D4F2244E74200CFFB7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2F5D4E2244E74200CFFB7E /* AppDelegate.swift */; };
 		1C2F5D512244E74200CFFB7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2F5D502244E74200CFFB7E /* ViewController.swift */; };
 		1C2F5D542244E74200CFFB7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2F5D522244E74200CFFB7E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		10416203613041EF1B565DC2 /* Pods-Astronomy-picture-of-the-day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy-picture-of-the-day.release.xcconfig"; path = "Target Support Files/Pods-Astronomy-picture-of-the-day/Pods-Astronomy-picture-of-the-day.release.xcconfig"; sourceTree = "<group>"; };
+		1C02CEF02249051F0054B5D9 /* popUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpVC.swift; sourceTree = "<group>"; };
 		1C2F5D4B2244E74200CFFB7E /* Astronomy-picture-of-the-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy-picture-of-the-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2F5D4E2244E74200CFFB7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2F5D502244E74200CFFB7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				1C2F5D4E2244E74200CFFB7E /* AppDelegate.swift */,
 				1C2F5D502244E74200CFFB7E /* ViewController.swift */,
+				1C02CEF02249051F0054B5D9 /* popUpVC.swift */,
 				1C2F5D522244E74200CFFB7E /* Main.storyboard */,
 				1C2F5D552244E74300CFFB7E /* Assets.xcassets */,
 				1C2F5D572244E74300CFFB7E /* LaunchScreen.storyboard */,
@@ -85,7 +88,6 @@
 				8B1C397222F307C3CFCED004 /* Pods-Astronomy-picture-of-the-day.debug.xcconfig */,
 				10416203613041EF1B565DC2 /* Pods-Astronomy-picture-of-the-day.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,6 +125,7 @@
 				TargetAttributes = {
 					1C2F5D4A2244E74200CFFB7E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -169,6 +172,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Astronomy-picture-of-the-day/Pods-Astronomy-picture-of-the-day-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/EasyPopUp/EasyPopUp.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -178,6 +183,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPopUp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -217,6 +224,7 @@
 			files = (
 				1C2F5D512244E74200CFFB7E /* ViewController.swift in Sources */,
 				1C2F5D4F2244E74200CFFB7E /* AppDelegate.swift in Sources */,
+				1C02CEF12249051F0054B5D9 /* popUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BP.Astronomy-picture-of-the-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -391,7 +399,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BP.Astronomy-picture-of-the-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

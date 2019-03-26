@@ -9,6 +9,8 @@ target 'Astronomy-picture-of-the-day' do
 
 pod 'AlamofireImage', '~> 3.5'
 pod 'SwiftyJSON'
+pod 'EasyPopUp' 
+
 
 end
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6221601D629AEC91658F88D2D3143F8D"
+               BlueprintIdentifier = "C34E44BCB1B34B1FC1C11B9747737FDE"
                BuildableName = "Pods_Astronomy_picture_of_the_day.framework"
                BlueprintName = "Pods-Astronomy-picture-of-the-day"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6221601D629AEC91658F88D2D3143F8D"
+            BlueprintIdentifier = "C34E44BCB1B34B1FC1C11B9747737FDE"
             BuildableName = "Pods_Astronomy_picture_of_the_day.framework"
             BlueprintName = "Pods-Astronomy-picture-of-the-day"
             ReferencedContainer = "container:Pods.xcodeproj">

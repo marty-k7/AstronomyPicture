@@ -2,11 +2,15 @@ PODS:
   - Alamofire (4.8.1)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
+  - DynamicBlurView (3.0.1)
+  - EasyPopUp (0.1.1):
+    - DynamicBlurView (~> 3.0.1)
   - Keys (1.0.1)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.5)
+  - EasyPopUp
   - Keys (from `Pods/CocoaPodsKeys`)
   - SwiftyJSON
 
@@ -14,6 +18,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - DynamicBlurView
+    - EasyPopUp
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -23,9 +29,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  DynamicBlurView: b1df5415f9bd31897549e5d7077e5ec120a4d636
+  EasyPopUp: 31282204eca32f4f8e42fb3339b2b490ab4ff496
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: cdc820a2db6f4b1166f7381ac853a31c15e6b75b
+PODFILE CHECKSUM: 793bf4134abe8c6cfc4b5125f0423e076bd4367f
 
 COCOAPODS: 1.6.0

@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var img: UIImage?
     var infoText: String?
     
+    
     // animated popup vc
     lazy var viewControllerPopup : EasyViewControllerPopup = {
         let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "vcpopup") as! popUpVC
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        showSpinner(on: self.view)
         getImageData()
         
     }
@@ -42,15 +43,22 @@ class ViewController: UIViewController {
     //MARK: - Networking
     
     func getImageData() {
+        
         Alamofire.request(BASE_URL + API_KEY, method: .get).responseJSON { response in
             if response.result.isSuccess {
                 let imageData : JSON = JSON(response.result.value!)
                 self.updateUI(with: imageData)
+               
+                
+            
             }
+            
         }
+        
     }
     
     func getImage(from url: String)  {
+     
         Alamofire.request(url).responseImage { response in
             
 //            debugPrint(response)
@@ -63,8 +71,9 @@ class ViewController: UIViewController {
                 return
             }
             self.bg.image = image
-            self.bg.contentMode = .scaleAspectFit
+            self.bg.contentMode = .scaleAspectFill
             self.img = image
+            self.removeSpinner()
             
         }
     }
@@ -86,8 +95,7 @@ class ViewController: UIViewController {
     
     @IBAction func discovery(_ sender: UIButton) {
         viewControllerPopup.showVCAsPopup()
-        
-  
+
     }
     
     
@@ -130,5 +138,30 @@ class ViewController: UIViewController {
         }
     }
 }
+//MARK: - Reuseable spinner
 
+var vSpinner : UIView?
 
+extension UIViewController {
+    func showSpinner(on view : UIView) {
+        let spinnerView = UIView.init(frame: view.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            view.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
+    }
+}

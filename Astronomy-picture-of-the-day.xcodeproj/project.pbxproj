@@ -50,6 +50,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1C228061224B7F7B00D760CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1C2F5D502244E74200CFFB7E /* ViewController.swift */,
+				1C02CEF02249051F0054B5D9 /* popUpVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1C228062224B7F9C00D760CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C2F5D522244E74200CFFB7E /* Main.storyboard */,
+				1C2F5D572244E74300CFFB7E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C228063224B7FAF00D760CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1C2F5D422244E74200CFFB7E = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				1C2F5D4E2244E74200CFFB7E /* AppDelegate.swift */,
-				1C2F5D502244E74200CFFB7E /* ViewController.swift */,
-				1C02CEF02249051F0054B5D9 /* popUpVC.swift */,
-				1C2F5D522244E74200CFFB7E /* Main.storyboard */,
+				1C228063224B7FAF00D760CC /* Model */,
+				1C228062224B7F9C00D760CC /* View */,
+				1C228061224B7F7B00D760CC /* Controller */,
 				1C2F5D552244E74300CFFB7E /* Assets.xcassets */,
-				1C2F5D572244E74300CFFB7E /* LaunchScreen.storyboard */,
 				1C2F5D5A2244E74300CFFB7E /* Info.plist */,
 			);
 			path = "Astronomy-picture-of-the-day";

@@ -20,9 +20,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var bg: UIImageView!
     
+    @IBOutlet weak var save: UIButton!
+    @IBOutlet weak var share: UIButton!
+    @IBOutlet weak var about: UIButton!
+    
     var img: UIImage?
     var infoText: String?
-    
     
     // animated popup vc
     lazy var viewControllerPopup : EasyViewControllerPopup = {
@@ -35,10 +38,22 @@ class ViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        save.floating(positinion: Double(self.view.frame.width / 2 - 25), position: Double(self.view.frame.height - 100), width: 50, height: 50, imageName: "save.png")
+        about.floating(positinion: 30, position: Double(self.view.frame.height - 100), width: 50, height: 50, imageName: "happy.png")
+        share.floating(positinion: Double(self.view.frame.width - 80), position: Double(self.view.frame.height - 100), width: 50, height: 50, imageName: "upload.png")
+        
+
+//
+//        save.setImage(UIImage(named: "save.png"), for: .normal)
+        
         showSpinner(on: self.view)
         getImageData()
         
     }
+    
+ 
  
     //MARK: - Networking
     
@@ -163,5 +178,34 @@ extension UIViewController {
             vSpinner?.removeFromSuperview()
             vSpinner = nil
         }
+    }
+}
+//MARK: -Reuseable floating button
+
+extension UIButton {
+    
+    func floating(positinion x: Double, position y: Double, width: Double, height: Double, title: String? = nil, imageName: String? = nil ) {
+        
+        //apsirasom kur ir kokio dydzio bus musu btn
+        self.frame = CGRect(x: x, y: y, width: width, height: height)
+        
+        self.layer.cornerRadius = CGFloat(width / 2)
+        self.layer.borderWidth = 3
+        self.layer.borderColor = UIColor.darkGray.cgColor
+        
+        self.layer.shadowColor = UIColor.white.cgColor
+        self.layer.shadowOpacity = 0.5
+       // self.layer.shadowRadius = 3
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        
+        self.setTitle(title, for: .normal)
+        self.setTitleColor( .darkGray, for: .normal)
+        
+        guard let imgName = imageName else {return}
+        self.setImage(UIImage(named: imgName)?.withRenderingMode(.alwaysTemplate), for: .normal)
+
+        self.backgroundColor = UIColor.white
+        self.tintColor = UIColor.darkGray
     }
 }
